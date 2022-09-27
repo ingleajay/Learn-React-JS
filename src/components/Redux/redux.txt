@@ -1,0 +1,27 @@
+1. Redux is another way to call or pass props data from parent to child components.
+
+2. Implementation   : React Redux or React toolkit
+
+3. Simplicity can break down when we have multiple components that need to share and use the same state.
+especially if those components are located in different parts of the application. 
+
+4. This is the basic idea behind Redux: a single centralized place to contain the global state in your application,
+and specific patterns to follow when updating that state to make the code predictable.
+
+5. Action : You can think of an action as an event that describes something that happened in the application.
+
+6. Reducers : A reducer is a function that receives the current state and an action object, decides how to update the state
+if necessary, and returns the new state: (state, action) => newState. You can think of a reducer 
+as an event listener which handles events based on the received action (event) type.
+
+7. Store : Store
+The current Redux application state lives in an object called the store .
+The store is created by passing in a reducer, and has a method called getState that returns the current state value.
+
+8. Dispatch : The Redux store has a method called dispatch. The only way to update 
+the state is to call store.dispatch() and pass in an action object. The store will 
+run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value
+You can think of dispatching actions as "triggering an event" in the application
+
+9. Selectors : Selectors are functions that know how to extract specific pieces of information from a store state value.
+As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data
